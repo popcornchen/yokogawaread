@@ -1,0 +1,16 @@
+c:\Users\ZHMin\Documents\Visual Studio 2013\Projects\yokogawaread\yokogawaread\bin\x64\Debug\yokogawaread.exe.config
+c:\Users\ZHMin\Documents\Visual Studio 2013\Projects\yokogawaread\yokogawaread\bin\x64\Debug\yokogawaread.exe
+c:\Users\ZHMin\Documents\Visual Studio 2013\Projects\yokogawaread\yokogawaread\bin\x64\Debug\yokogawaread.pdb
+c:\Users\ZHMin\Documents\Visual Studio 2013\Projects\yokogawaread\yokogawaread\bin\x64\Debug\TmctlAPINet64.dll
+c:\Users\ZHMin\Documents\Visual Studio 2013\Projects\yokogawaread\yokogawaread\obj\x64\Debug\yokogawaread.csprojResolveAssemblyReference.cache
+c:\Users\ZHMin\Documents\Visual Studio 2013\Projects\yokogawaread\yokogawaread\obj\x64\Debug\yokogawaread.Form1.resources
+c:\Users\ZHMin\Documents\Visual Studio 2013\Projects\yokogawaread\yokogawaread\obj\x64\Debug\yokogawaread.Properties.Resources.resources
+c:\Users\ZHMin\Documents\Visual Studio 2013\Projects\yokogawaread\yokogawaread\obj\x64\Debug\yokogawaread.csproj.GenerateResource.Cache
+c:\Users\ZHMin\Documents\Visual Studio 2013\Projects\yokogawaread\yokogawaread\obj\x64\Debug\yokogawaread.exe
+c:\Users\ZHMin\Documents\Visual Studio 2013\Projects\yokogawaread\yokogawaread\obj\x64\Debug\yokogawaread.pdb
+D:\机器人云平台边缘开发\yokogawaread\yokogawaread\bin\x64\Debug\yokogawaread.exe.config
+D:\机器人云平台边缘开发\yokogawaread\yokogawaread\obj\x64\Debug\yokogawaread.exe
+D:\机器人云平台边缘开发\yokogawaread\yokogawaread\obj\x64\Debug\yokogawaread.pdb
+E:\课题组\机器人云平台边缘开发\yokogawaread\yokogawaread\bin\x64\Debug\yokogawaread.exe.config
+E:\课题组\机器人云平台边缘开发\yokogawaread\yokogawaread\obj\x64\Debug\yokogawaread.exe
+E:\课题组\机器人云平台边缘开发\yokogawaread\yokogawaread\obj\x64\Debug\yokogawaread.pdb

@@ -1,0 +1,1 @@
+c:\Users\ZHMin\Documents\Visual Studio 2013\Projects\yokogawaread\yokogawaread\bin\x64\Release\yokogawaread.exe.config

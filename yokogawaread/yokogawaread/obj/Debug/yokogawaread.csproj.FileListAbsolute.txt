@@ -1,0 +1,10 @@
+c:\users\zhmin\documents\visual studio 2013\Projects\yokogawaread\yokogawaread\bin\Debug\yokogawaread.exe.config
+c:\users\zhmin\documents\visual studio 2013\Projects\yokogawaread\yokogawaread\bin\Debug\yokogawaread.exe
+c:\users\zhmin\documents\visual studio 2013\Projects\yokogawaread\yokogawaread\bin\Debug\yokogawaread.pdb
+c:\users\zhmin\documents\visual studio 2013\Projects\yokogawaread\yokogawaread\bin\Debug\TmctlAPINet64.dll
+c:\users\zhmin\documents\visual studio 2013\Projects\yokogawaread\yokogawaread\obj\Debug\yokogawaread.csprojResolveAssemblyReference.cache
+c:\users\zhmin\documents\visual studio 2013\Projects\yokogawaread\yokogawaread\obj\Debug\yokogawaread.Form1.resources
+c:\users\zhmin\documents\visual studio 2013\Projects\yokogawaread\yokogawaread\obj\Debug\yokogawaread.Properties.Resources.resources
+c:\users\zhmin\documents\visual studio 2013\Projects\yokogawaread\yokogawaread\obj\Debug\yokogawaread.csproj.GenerateResource.Cache
+c:\users\zhmin\documents\visual studio 2013\Projects\yokogawaread\yokogawaread\obj\Debug\yokogawaread.exe
+c:\users\zhmin\documents\visual studio 2013\Projects\yokogawaread\yokogawaread\obj\Debug\yokogawaread.pdb
