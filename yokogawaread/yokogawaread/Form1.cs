@@ -60,7 +60,7 @@ namespace yokogawaread
                 MySqlConnection con = DataClass.ConnectionPool.getPool().getConnection();
                 DataClass.ConnectionPool.getPool().closeConnection(con);
             }*/
-            tag = get_tag();
+            //tag = get_tag();
         }
 
         /*-----------------开始采集按钮--------------------*/
@@ -184,7 +184,7 @@ namespace yokogawaread
                 SetMsg(buff_2.ToString().Substring(26) + "    ");
                 SetMsg("\r\n");
 
-                db_upload1to1((tag + currentcycletime).ToString(), buff_1.ToString().Substring(26), buff_2.ToString().Substring(26));
+                db_upload1to1(buff_1.ToString().Substring(26), buff_2.ToString().Substring(26));
                 //db_upload(buff_1.ToString().Substring(26), "current1");//26                
                 
             }
@@ -238,7 +238,7 @@ namespace yokogawaread
                 //db_upload(buff_4.ToString().Substring(26), "voltage2");
 
                 SetMsg("\r\n");
-                db_upload2to3((tag + currentcycletime).ToString(), buff_1.ToString().Substring(26), buff_2.ToString().Substring(26), buff_3.ToString().Substring(26), buff_4.ToString().Substring(26));
+                db_upload2to3(buff_1.ToString().Substring(26), buff_2.ToString().Substring(26), buff_3.ToString().Substring(26), buff_4.ToString().Substring(26));
             }
 
             //threadTimer.Dispose();
@@ -273,9 +273,9 @@ namespace yokogawaread
             textBox4.Text = constr_split[1];
             textBox5.Text = constr_split[4];
 
-            string command_init = "Truncate table yokogawa_record";
-            MySqlCommand delete = new MySqlCommand(command_init, con);
-            delete.ExecuteNonQuery();  //初始化清空一下表，是否需要保留数据？
+            //string command_init = "Truncate table yokogawa_record";
+            //MySqlCommand delete = new MySqlCommand(command_init, con);
+            //delete.ExecuteNonQuery();  //初始化清空一下表，是否需要保留数据？
             con.Close();
 
             return 0;
@@ -303,33 +303,40 @@ namespace yokogawaread
             return 0;
         }
 
-        public void db_upload2to3(string number, string voltage1, string current1, string voltage2, string current2)
+        public void db_upload2to3(string voltage1, string current1, string voltage2, string current2)
         {
             con = DataClass.ConnectionPool.getPool().getConnection();
-            string content = "insert into yokogawa_record(number, voltage1, current1, voltage2, current2) values('" + number + "', '" + voltage1 + "', '" + current1 + "', '" + voltage2 + "', '" + current2 + "')";
+            string content = "insert into yokogawa_record(a_1, v_1, a_2, v_2) values('" + current1 + "', '" + voltage1 + "', '" + current2 + "', '" + voltage2 + "')";
             insert = new MySqlCommand(content, con);
             insert.ExecuteNonQuery();
             DataClass.ConnectionPool.getPool().closeConnection(con);
         }
-        public void db_upload1to1(string number, string voltage1, string current1)
+        public void db_upload1to1(string voltage1, string current1)
         {
             MySqlConnection con = DataClass.ConnectionPool.getPool().getConnection();
-            string content = "insert into yokogawa_record(number, voltage1, current1) values('" + number + "', '" + voltage1 + "', '" + current1 + "')";
+            string content = "insert into yokogawa_record(voltage1, current1) values('" + current1 + "', '" + voltage1 + "')";
             MySqlCommand insert = new MySqlCommand(content, con);
             insert.ExecuteNonQuery();
             DataClass.ConnectionPool.getPool().closeConnection(con);
         }
 
-        public void refresh_tag(string cycle)
+        public void refresh_tag(string cycle) //写入不用管。。。
         {
+            //取对应设备的最后一行
             MySqlConnection con = DataClass.ConnectionPool.getPool().getConnection();
-            string content = "update yokogawa_monitor set StartPosition='" + cycle + "' where line=0";
+            string get_LastRow = "SELECT * from yokogawa_record where robot_id='EpsonC4' order by id DESC limit 1";
+            MySqlCommand cmd = new MySqlCommand(get_LastRow, con);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt); 
+
+            string content = "insert into robot_monitor set StartPosition='" + cycle + "' where line=0";
             MySqlCommand insert = new MySqlCommand(content, con);
             insert.ExecuteNonQuery();
             DataClass.ConnectionPool.getPool().closeConnection(con);
         }
 
-        public int get_tag()
+        public int get_tag() //这个插入的时候不需要，往后insert就行
         {
             MySqlConnection con = DataClass.ConnectionPool.getPool().getConnection();
             string content = "select StartPosition from yokogawa_monitor where line=0";
